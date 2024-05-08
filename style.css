@@ -14,83 +14,87 @@
     background-color: black;
 }
 
-.prisma {
+.prism {
+        z-index: 1;
         position: relative;
         width: 0;
         height: 0;
-        border: 175px solid transparent;
+        border: 10.9rem solid transparent;
         border-top: 0;
-        border-bottom: 300px solid rgba(255, 255, 255, 0.7);
-        filter: blur(2.3px);
+        border-bottom: 18.75rem solid rgba(255, 255, 255, 0.7);
+        filter: blur(0.14rem);
         display: flex;
         justify-content: center;
+        
 }
 
-.prisma::before {
+.prism::before {
     content: "";
     position: absolute;
     width: 0px;
     height: 0px;
-    border: 168px solid transparent;
+    border: 10.5rem solid transparent;
     border-top: 0;
-    border-bottom: 290px solid black;
-    top: 5px;
+    border-bottom: 18.12rem solid black;
+    top: 0.31rem;
+    
 
 }
 
 
+.prism::after {
+    z-index: 3;
+    position: absolute;
+    top: 4.87rem;
+    left: -3.12rem;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 1.87rem solid transparent;
+    border-bottom: 1.87rem solid transparent;
+    border-right: 7.25rem solid rgba(255, 255, 255, 0.10);
+    transform: skew(15deg);
+    
+}
+
+
 .light {
+    z-index: 2;
     position: absolute;
     top:46%;
     left: 34%;
-    width: 24px;
-    height: 190px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 80%);
+    width: 1.5rem;
+    height: 11.87rem;
+    background: radial-gradient(circle, rgba(255, 255, 255) 4%, rgba(255, 255, 255, 0.3));
     transform: skew(-68deg);
     animation: light-beam 4s linear infinite;
 }
 
 @keyframes light-beam {
     0% {
-
+        filter: blur(0.5rem)
     }
     50% {
-        background-color: white;
+        filter: blur(0.62rem)
     }
     90% {
- 
+        filter: blur(0.93rem)
     }
     100% {
-     
-        filter: blur(20px);
-       
+    
+        filter: blur(1.25rem)
+        
+
     }
 }
 
 .raimbow {
     position: absolute;
-    top:46%;
-    right: 34%;
-    width: 34px;
-    height: 190px;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    transform: skew(68deg);
-    animation: raimbow-effect 4s linear infinite;
+    top:43%;
+    right: 33.3%;
+    width: 7.8rem;
+    height: 12.5rem;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    transform: skew(70deg) skewY(-10deg);
     }
 
-@keyframes raimbow-effect {
-        0% {
-            filter: blur(8px)
-        }
-        50% {
-            filter: blur(10px)
-        }
-        90% {
-            filter: blur(15px)
-        }
-        100% {
-        
-            filter: blur(20px)
- 
-        }
-}
